@@ -143,6 +143,7 @@ venv.bak/
 dar
 .dar
 dar/
+pyvenv.cfg
 
 # Spyder project settings
 .spyderproject
