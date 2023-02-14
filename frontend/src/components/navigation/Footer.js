@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 
 function Footer(){
     return(
-      <footer className="footer p-10 bg-neutral text-neutral-content static bottom-0">
+      <footer className="footer p-10 bg-primary text-neutral-content static bottom-0">
       <div>
         <span className="footer-title">Services</span> 
         <a className="link link-hover">Branding</a>
