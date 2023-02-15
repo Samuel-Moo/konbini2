@@ -15,7 +15,7 @@ function Manga(){
             <div class="grid grid-cols-6 gap-4">
                 <div className="card-compact w-48 bg-base-100 group" top>
                     <a href="/">
-                    <figure><img src= {loveiswar} alt="manga" /></figure>
+                    <figure><img src= {loveiswar} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title group-hover:text-warning">
                             Love is War 
@@ -32,10 +32,10 @@ function Manga(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={drstone} alt="manga" /></figure>
+                    <figure><img src={drstone} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                        Dr. Stonee
+                        Dr. Stone
                             <div className="badge badge-info">NEW</div>
                             
                         </h2>
@@ -47,7 +47,7 @@ function Manga(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={oshi} alt="manga" /></figure>
+                    <figure><img src={oshi} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         Oshi No Ko
@@ -61,7 +61,7 @@ function Manga(){
                     </div>
                 </div>
                 <div className="card-compact w-48 bg-base-100" top>
-                    <figure><img src= {loveiswar} alt="manga" /></figure>
+                    <figure><img src= {loveiswar} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             Love is War 
@@ -77,7 +77,7 @@ function Manga(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={drstone} alt="manga" /></figure>
+                    <figure><img src={drstone} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         Dr. Stone
@@ -92,7 +92,7 @@ function Manga(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={oshi} alt="manga" /></figure>
+                    <figure><img src={oshi} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         Oshi No Ko
@@ -106,7 +106,7 @@ function Manga(){
                     </div>
                 </div>
                 <div className="card-compact w-48 bg-base-100" top>
-                    <figure><img src= {loveiswar} alt="manga" /></figure>
+                    <figure><img src= {loveiswar} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             Love is War 
@@ -122,7 +122,7 @@ function Manga(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={drstone} alt="manga" /></figure>
+                    <figure><img src={drstone} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         Dr. Stone
@@ -137,7 +137,7 @@ function Manga(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={oshi} alt="manga" /></figure>
+                    <figure><img src={oshi} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         Oshi No Ko

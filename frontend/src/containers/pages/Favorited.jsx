@@ -16,24 +16,21 @@ function Favorited(){
                 <div className="py-4"><h1 className="text-3xl text-center font-bold">Favorited</h1></div>
                     
                     <Favorites/>
-                    <div class="grid grid-cols-3 gap-4">
-                <div className="card-compact w-96 bg-base-100 shadow-xl" top>
-                    <figure><img src={sergio} alt="anime" className="w-full" /></figure>
+                    <div class="grid grid-cols-6 gap-4">
+                <div className="card-compact w-48 bg-base-100 shadow-xl" top>
+                    <figure><img src={sergio} alt="anime" className=" rounded-t-lg box-content h-64 w-48" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             Sergio 
-                            <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p>Anime demo</p>
                         <div className="card-actions justify-end">
-                            <div className="badge badge-outline">Anime</div> 
-                            <div className="badge badge-outline">Fresh</div>
                         </div>
                     </div>
                 </div>
 
-                <div className="card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src={drpiedrota} alt="anime" /></figure>
+                <div className="card-compact w-48 bg-base-100 shadow-xl">
+                    <figure><img src={drpiedrota} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         dr stone
@@ -47,8 +44,8 @@ function Favorited(){
                     </div>
                 </div>
 
-                <div className="card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src={platinum} alt="anime" /></figure>
+                <div className="card-compact w-48 bg-base-100 shadow-xl">
+                    <figure><img src={platinum} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         platinum end
@@ -62,8 +59,8 @@ function Favorited(){
                     </div>
                 </div>
             
-                <div className="card-compact w-96 bg-base-100 shadow-xl" top>
-                    <figure><img src={cosahermosa} alt="anime" /></figure>
+                <div className="card-compact w-48 bg-base-100 shadow-xl" top>
+                    <figure><img src={cosahermosa} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             Elden Ring
@@ -77,8 +74,8 @@ function Favorited(){
                     </div>
                 </div>
 
-                <div className="card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src={logo_1} alt="anime" /></figure>
+                <div className="card-compact w-48 bg-base-100 shadow-xl">
+                    <figure><img src={logo_1} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         wa
@@ -92,8 +89,8 @@ function Favorited(){
                     </div>
                 </div>
 
-                <div className="card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src={Logo_2} alt="anime" /></figure>
+                <div className="card-compact w-48 bg-base-100 shadow-xl">
+                    <figure><img src={Logo_2} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         konbi life
