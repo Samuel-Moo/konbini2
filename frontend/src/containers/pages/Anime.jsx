@@ -25,7 +25,7 @@ function Anime(){
                             Sergio 
                             <div className="badge badge-info">NEW</div>
                         </h2>
-                        <p>"Sergio es el ninja de mi colegio que enfrenta demonios para encontrar paz y al enemigo que lo despojo de su amada".</p>
+                        
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Anime</div> 
                             
@@ -33,10 +33,11 @@ function Anime(){
                     </div>
                 </div>
 
-                <div className="card-compact w-48 bg-base-100">
+                <div className="card-compact w-48 bg-base-100 group">
+                    <a href="/">
                     <figure><img src={drpiedrota} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
-                        <h2 className="card-title">
+                        <h2 className="card-title group-hover:text-warning">
                         dr stone
                             <div className="badge badge-info">NEW</div>
                         </h2>
@@ -46,6 +47,7 @@ function Anime(){
                             
                         </div>
                     </div>
+                    </a>
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
@@ -100,7 +102,7 @@ function Anime(){
                         konbi life
                             <div className="badge badge-info">NEW</div>
                         </h2>
-                        <p>anime demo 6</p>
+                    
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Anime</div> 
                             

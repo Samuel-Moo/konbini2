@@ -2,7 +2,7 @@ import { connect } from "react-redux"
 
 function Favorites(){
     return(
-            <div className="flex">
+            <div className="flex py-4 justify-center">
                 <div className="btn-group">
                     <button className="btn">Anime</button>
                     <button className="btn">Manga</button>

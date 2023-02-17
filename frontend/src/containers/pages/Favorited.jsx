@@ -16,6 +16,7 @@ function Favorited(){
                 <div className="py-4"><h1 className="text-3xl text-center font-bold">Favorited</h1></div>
                     
                     <Favorites/>
+                    
                     <div class="grid grid-cols-6 gap-4">
                 <div className="card-compact w-48 bg-base-100 shadow-xl" top>
                     <figure><img src={sergio} alt="anime" className=" rounded-t-lg box-content h-64 w-48" /></figure>
