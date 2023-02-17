@@ -9,52 +9,144 @@ import oshi from "assets/images/oshi.jpg"
 function Manga(){
     return(
         <Layout>
+           
             <Navbar>
-                
-                <div>Manga</div>
-            <div class="grid grid-cols-3 gap-4">
-                <div className="card-compact w-96 bg-base-100 shadow-xl" top>
-                    <figure><img src= {loveiswar} alt="manga" /></figure>
+            <div className="py-4"><h1 className="text-3xl text-center font-bold">Manga</h1></div>
+            <div class="grid grid-cols-6 gap-4">
+                <div className="card-compact w-48 bg-base-100 group" top>
+                    <a href="/">
+                    <figure><img src= {loveiswar} alt="manga" className="box-content h-64 w-48"/></figure>
+                    <div className="card-body">
+                        <h2 className="card-title group-hover:text-warning">
+                            Love is War 
+                            <div className="badge badge-info ">NEW</div>
+                            
+                        </h2>
+                        
+                        <div className="card-actions justify-end">
+                            <div className="badge badge-outline">Manga</div> 
+                           
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div className="card-compact w-48 bg-base-100">
+                    <figure><img src={drstone} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                            Love is war 
-                            <div className="badge badge-secondary">NEW</div>
+                        Dr. Stone
+                            <div className="badge badge-info">NEW</div>
+                            
                         </h2>
-                        <p>Manga demo</p>
                         <div className="card-actions justify-end">
-                            back
                             <div className="badge badge-outline">Manga</div> 
-                            <div className="badge badge-outline">Fresh</div>
+                          
                         </div>
                     </div>
                 </div>
 
-                <div className="card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src={drstone} alt="manga" /></figure>
+                <div className="card-compact w-48 bg-base-100">
+                    <figure><img src={oshi} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                        dr stone
-                            <div className="badge badge-secondary">NEW</div>
+                        Oshi No Ko
+                            <div className="badge badge-info">NEW</div>
+                            
                         </h2>
-                        <p>manga demo 2</p>
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Manga</div> 
-                            <div className="badge badge-outline">Fresh</div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div className="card-compact w-48 bg-base-100" top>
+                    <figure><img src= {loveiswar} alt="manga" className="box-content h-64 w-48"/></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">
+                            Love is War 
+                            <div className="badge badge-info">NEW</div>
+                            
+                        </h2>
+                        
+                        <div className="card-actions justify-end">
+                            <div className="badge badge-outline">Manga</div> 
+                           
                         </div>
                     </div>
                 </div>
 
-                <div className="card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src={oshi} alt="manga" /></figure>
+                <div className="card-compact w-48 bg-base-100">
+                    <figure><img src={drstone} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                        oshi no ko
-                            <div className="badge badge-secondary">NEW</div>
+                        Dr. Stone
+                            <div className="badge badge-info">NEW</div>
+                            
                         </h2>
-                        <p>manga demo 3</p>
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Manga</div> 
-                            <div className="badge badge-outline">Fresh</div>
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card-compact w-48 bg-base-100">
+                    <figure><img src={oshi} alt="manga" className="box-content h-64 w-48"/></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">
+                        Oshi No Ko
+                            <div className="badge badge-info">NEW</div>
+                            
+                        </h2>
+                        <div className="card-actions justify-end">
+                            <div className="badge badge-outline">Manga</div> 
+                           
+                        </div>
+                    </div>
+                </div>
+                <div className="card-compact w-48 bg-base-100" top>
+                    <figure><img src= {loveiswar} alt="manga" className="box-content h-64 w-48"/></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">
+                            Love is War 
+                            <div className="badge badge-info">NEW</div>
+                            
+                        </h2>
+                        
+                        <div className="card-actions justify-end">
+                            <div className="badge badge-outline">Manga</div> 
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card-compact w-48 bg-base-100">
+                    <figure><img src={drstone} alt="manga" className="box-content h-64 w-48"/></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">
+                        Dr. Stone
+                            <div className="badge badge-info">NEW</div>
+                            
+                        </h2>
+                        <div className="card-actions justify-end">
+                            <div className="badge badge-outline">Manga</div> 
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card-compact w-48 bg-base-100">
+                    <figure><img src={oshi} alt="manga" className="box-content h-64 w-48"/></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">
+                        Oshi No Ko
+                            <div className="badge badge-info">NEW</div>
+                            
+                        </h2>
+                        <div className="card-actions justify-end">
+                            <div className="badge badge-outline">Manga</div> 
+                           
                         </div>
                     </div>
                 </div>
