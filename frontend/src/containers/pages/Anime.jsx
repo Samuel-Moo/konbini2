@@ -19,13 +19,13 @@ function Anime(){
                 <div className="py-4"><h1 className="text-3xl text-center font-bold">Anime</h1></div>
             <div class="grid grid-cols-6 gap-4">
                 <div className="card-compact w-48 bg-warning rounded-lg" top>
-                    <figure><img src={sergio} alt="anime" className="w-full rounded-t-lg" /></figure>
+                    <figure><img src={sergio} alt="anime" className=" rounded-t-lg box-content h-64 w-48" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             Sergio 
                             <div className="badge badge-info">NEW</div>
                         </h2>
-                        <p>"Sergio es el ninja de mi colegio que enfrenta demonios para encontrar paz y al enemigo que lo despojo de su amada".</p>
+                        
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Anime</div> 
                             
@@ -33,10 +33,11 @@ function Anime(){
                     </div>
                 </div>
 
-                <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={drpiedrota} alt="anime" /></figure>
+                <div className="card-compact w-48 bg-base-100 group">
+                    <a href="/">
+                    <figure><img src={drpiedrota} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
-                        <h2 className="card-title">
+                        <h2 className="card-title group-hover:text-warning">
                         dr stone
                             <div className="badge badge-info">NEW</div>
                         </h2>
@@ -46,10 +47,11 @@ function Anime(){
                             
                         </div>
                     </div>
+                    </a>
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={platinum} alt="anime" /></figure>
+                    <figure><img src={platinum} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         platinum end
@@ -64,7 +66,7 @@ function Anime(){
                 </div>
             
                 <div className="card-compact w-48 bg-base-100" top>
-                    <figure><img src={cosahermosa} alt="anime" /></figure>
+                    <figure><img src={cosahermosa} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             Elden Ring
@@ -79,7 +81,7 @@ function Anime(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={logo_1} alt="anime" /></figure>
+                    <figure><img src={logo_1} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         bellaca wa
@@ -94,13 +96,13 @@ function Anime(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100">
-                    <figure><img src={Logo_2} alt="anime" /></figure>
+                    <figure><img src={Logo_2} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         konbi life
                             <div className="badge badge-info">NEW</div>
                         </h2>
-                        <p>anime demo 6</p>
+                    
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Anime</div> 
                             
@@ -108,7 +110,7 @@ function Anime(){
                     </div>
                 </div>
                 <div className="card-compact w-48 bg-warning rounded-lg" top>
-                    <figure><img src={sergio} alt="anime" className="w-full rounded-t-lg" /></figure>
+                    <figure><img src={sergio} alt="anime" className=" rounded-t-lg box-content h-64 w-48" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             Sergio 
