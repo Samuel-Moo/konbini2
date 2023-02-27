@@ -6,23 +6,18 @@ function Drstonea(){
     return(
         <Layout>
             <Navbar>
-            <div class="grid grid-rows-2 grid-col-5 gap-4">
+            <div class="grid grid-rows-2 grid-col-5 gap-2">
                 
                 <div className="row-start-1 row-end-1">
-                    <div className="card-normal w-48 bg-base-100 group py-6">
-                        <figure><img src={drpiedrota} alt="anime" className=" rounded-lg box-content h-64 w-48 border-4"/></figure>
-                        <div className="card-body">
-                            <div className="card-actions justify-center bg-warning py-2 rounded-lg">
-                                <button className="">Add to favorites+ </button>
-                            
-                            </div>
-                    </div>
-                    </div>
+                    
+                        <figure><img src={drpiedrota} alt="anime" className=" rounded-lg box-content h-80 w-64 border-4"/></figure>
+                        
+                    
                 </div>
-                <div class="col-start-2 col-end-6 row-start-1 row-end-2 bg-secondary">
-                    <h1 className="text-4xl font-bold">Dr Stone</h1>
-                    <h2 className="text-3xl ">Science</h2>
-                    <h3 className="text-2xl italic underline">Sinapsis</h3>
+                <div class="col-start-2 col-end-6 row-start-1 row-end-1 bg-secondary">
+                    <h1 className="text-3xl font-bold">Dr Stone</h1>
+                    
+                    <h2 className="text-2xl italic underline">Sinapsis</h2>
                     <p>Awakened into a world where humanity has been petrified, scientific genius Senku and his brawny friend Taiju use their skills to rebuild civilization.</p>
                 </div>
                 
@@ -30,7 +25,7 @@ function Drstonea(){
                     <table className="table w-full ">
                         <thead>
                             <tr>
-                                <th className="fixed">LISTA DE EPISODIOS</th>
+                                <th className="fixed">Episodes</th>
                             </tr>
                         </thead>
                         <tbody>

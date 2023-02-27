@@ -38,7 +38,7 @@ function Anime(){
                     <figure><img src={drpiedrota} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title group-hover:text-warning">
-                        dr stone
+                        Dr Stone
                             <div className="badge badge-info">NEW</div>
                         </h2>
                         <div className="card-actions justify-end">
