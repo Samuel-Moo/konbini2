@@ -6,9 +6,11 @@ import { Provider } from "react-redux";
 import Anime from "containers/pages/Anime";
 import Manga from "containers/pages/Manga";
 import Buscar from "containers/pages/Buscar";
+import Drstonea from "containers/pages/Anime-ep";
 import LoginCreate from "containers/pages/LoginCreate";
 /* import {LoginButton, LogoutButton} from "containers/pages/login"; */
 import Favorited from "containers/pages/Favorited";
+import AVideo from "containers/pages/AVideo";
 
 function App() {
   return (
@@ -21,8 +23,11 @@ function App() {
           {/* Home Display */}
           <Route path="/" element={<Home />} />
 
-          {/*Anime page */}
+          {/*Anime directory */}
           <Route path="/Anime" element={<Anime />} />
+
+          {/*Dr stone Anime page*/}
+          <Route path="/Drstonea" element={<Drstonea />} />
 
           {/*Manga page */}
           <Route path="/Manga" element={<Manga />} />
@@ -35,6 +40,9 @@ function App() {
 
           {/*Login page */}
           <Route path="/LoginCreate" element={<LoginCreate />} />
+
+          {/*Anime Player*/}
+          <Route path="/AVideo" element={<AVideo />} />
 
           {/* 
           <Route path="/login" element={< LoginButton /> }/>
