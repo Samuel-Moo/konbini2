@@ -9,9 +9,6 @@ import Logo_2 from "assets/images/Logo_2.jpg"
 import cosahermosa from "assets/images/cosahermosa.jpg"
 
 
-
-
-
 function Anime(){
     return(
         <Layout>
