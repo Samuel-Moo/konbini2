@@ -27,6 +27,7 @@ from rest_framework import routers
 
 #import views from users
 from users import views
+from users.views import register_user
 # create a router object
 router = routers.DefaultRouter()
 
@@ -42,6 +43,6 @@ urlpatterns = [
 	path('todo/', include(router.urls)),
     path('profile/', views.ProfileView.as_view()),
     path('logout/', views.LogoutView.as_view()),
-    path('register/', views.register_user),
+    path('register/', register_user, name='register_user'),
 ]
 

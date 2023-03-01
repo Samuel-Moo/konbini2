@@ -80,7 +80,7 @@ function Login(){
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Username:</span>
+                  <span className="label-text">Username</span>
                 </label>
                 <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Write your username" className="input input-bordered" />
               </div>
