@@ -5,6 +5,8 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.models import User
 from . import serializers
 from rest_framework.decorators import api_view
+from rest_framework.decorators import permission_classes
+from rest_framework.decorators import authentication_classes
 
 class LoginView(views.APIView):
     # This view should be accessible also for unauthenticated users.
@@ -33,6 +35,8 @@ class LogoutView(views.APIView):
     
 
 @api_view(['POST'])
+@authentication_classes([])
+@permission_classes([])
 def register_user(request):
     # Get the user's information from the POST request payload
     username = request.data.get('username')
