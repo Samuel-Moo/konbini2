@@ -10,9 +10,14 @@ import Drstonea from "containers/pages/Anime-ep";
 import LoginCreate from "containers/pages/LoginCreate";
 /* import {LoginButton, LogoutButton} from "containers/pages/login"; */
 import Favorited from "containers/pages/Favorited";
+<<<<<<< HEAD
+import Profile from "containers/pages/Profile";
+import Settings from "containers/pages/Settings";
+=======
 import AVideo from "containers/pages/AVideo";
 import MangaLec from "containers/pages/MangaLec";
 import KaguyaM from "containers/pages/Manga-ep";
+>>>>>>> a4d69cb3356012b47a80bf8c56671edf36331d91
 
 function App() {
   return (
@@ -60,6 +65,10 @@ function App() {
           <Route path="/logout" element={< LogoutButton /> }/>
 
           <Route path="/counter" element={< Counter />}/>  */}
+
+          <Route path="/Profile" element={<Profile />} />
+
+          <Route path="/Settings" element={<Settings />} />
 
         </Routes>
       </Router>
