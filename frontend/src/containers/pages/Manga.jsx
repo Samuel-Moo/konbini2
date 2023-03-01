@@ -12,9 +12,9 @@ function Manga(){
            
             <Navbar>
             <div className="py-4"><h1 className="text-3xl text-center font-bold">Manga</h1></div>
-            <div class="grid grid-cols-6 gap-4">
+            <div class="grid grid-cols-6 px-2 py-2">
                 <div className="card-compact w-48 bg-base-100 group" top>
-                    <a href="/">
+                    <a href="/KaguyaM">
                     <figure><img src= {loveiswar} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title group-hover:text-warning">

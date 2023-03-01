@@ -11,6 +11,8 @@ import LoginCreate from "containers/pages/LoginCreate";
 /* import {LoginButton, LogoutButton} from "containers/pages/login"; */
 import Favorited from "containers/pages/Favorited";
 import AVideo from "containers/pages/AVideo";
+import MangaLec from "containers/pages/MangaLec";
+import KaguyaM from "containers/pages/Manga-ep";
 
 function App() {
   return (
@@ -43,6 +45,13 @@ function App() {
 
           {/*Anime Player*/}
           <Route path="/AVideo" element={<AVideo />} />
+
+          {/*Manga Lector */}
+          <Route path="/MangaLec" element={<MangaLec />} />
+
+          {/*Manga page*/}
+          <Route path="/KaguyaM" element={<KaguyaM />} />
+
 
           {/* 
           <Route path="/login" element={< LoginButton /> }/>

@@ -7,7 +7,7 @@ import sergio from 'assets/images/sergio.jpg'
 
 function Navbar({children}){
     return(
-      <div className="drawer sticky"> 
+      <div className="drawer static"> 
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
       <div className="drawer-content flex flex-col">
           {/* Navbar */}
