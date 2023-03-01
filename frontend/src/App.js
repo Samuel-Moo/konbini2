@@ -9,6 +9,8 @@ import Buscar from "containers/pages/Buscar";
 import LoginCreate from "containers/pages/LoginCreate";
 /* import {LoginButton, LogoutButton} from "containers/pages/login"; */
 import Favorited from "containers/pages/Favorited";
+import Profile from "containers/pages/Profile";
+import Settings from "containers/pages/Settings";
 
 function App() {
   return (
@@ -43,6 +45,10 @@ function App() {
           <Route path="/logout" element={< LogoutButton /> }/>
 
           <Route path="/counter" element={< Counter />}/>  */}
+
+          <Route path="/Profile" element={<Profile />} />
+
+          <Route path="/Settings" element={<Settings />} />
 
         </Routes>
       </Router>
