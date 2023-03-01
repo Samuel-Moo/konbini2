@@ -25,19 +25,24 @@ from todo import views
 # it is necessary for routing
 from rest_framework import routers
 
+#import views from users
+from users import views
+from users.views import register_user
 # create a router object
 router = routers.DefaultRouter()
 
 # register the router
-router.register(r'tasks',views.TodoView, 'task')
+# router.register(r'tasks', views.TodoView, 'task')
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
-
+    path('login/', views.LoginView.as_view()),
 	# add another path to the url patterns
 	# when you visit the localhost:8000/api
 	# you should be routed to the django Rest framework
-	path('api/', include(router.urls))
-
-
+	path('todo/', include(router.urls)),
+    path('profile/', views.ProfileView.as_view()),
+    path('logout/', views.LogoutView.as_view()),
+    path('register/', register_user, name='register_user'),
 ]
+

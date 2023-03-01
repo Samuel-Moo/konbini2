@@ -6,11 +6,18 @@ import { Provider } from "react-redux";
 import Anime from "containers/pages/Anime";
 import Manga from "containers/pages/Manga";
 import Buscar from "containers/pages/Buscar";
+import Drstonea from "containers/pages/Anime-ep";
 import LoginCreate from "containers/pages/LoginCreate";
 /* import {LoginButton, LogoutButton} from "containers/pages/login"; */
 import Favorited from "containers/pages/Favorited";
+<<<<<<< HEAD
 import Profile from "containers/pages/Profile";
 import Settings from "containers/pages/Settings";
+=======
+import AVideo from "containers/pages/AVideo";
+import MangaLec from "containers/pages/MangaLec";
+import KaguyaM from "containers/pages/Manga-ep";
+>>>>>>> a4d69cb3356012b47a80bf8c56671edf36331d91
 
 function App() {
   return (
@@ -23,8 +30,11 @@ function App() {
           {/* Home Display */}
           <Route path="/" element={<Home />} />
 
-          {/*Anime page */}
+          {/*Anime directory */}
           <Route path="/Anime" element={<Anime />} />
+
+          {/*Dr stone Anime page*/}
+          <Route path="/Drstonea" element={<Drstonea />} />
 
           {/*Manga page */}
           <Route path="/Manga" element={<Manga />} />
@@ -37,6 +47,16 @@ function App() {
 
           {/*Login page */}
           <Route path="/LoginCreate" element={<LoginCreate />} />
+
+          {/*Anime Player*/}
+          <Route path="/AVideo" element={<AVideo />} />
+
+          {/*Manga Lector */}
+          <Route path="/MangaLec" element={<MangaLec />} />
+
+          {/*Manga page*/}
+          <Route path="/KaguyaM" element={<KaguyaM />} />
+
 
           {/* 
           <Route path="/login" element={< LoginButton /> }/>

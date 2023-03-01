@@ -9,15 +9,12 @@ import Logo_2 from "assets/images/Logo_2.jpg"
 import cosahermosa from "assets/images/cosahermosa.jpg"
 
 
-
-
-
 function Anime(){
     return(
         <Layout>
             <Navbar>
                 <div className="py-4"><h1 className="text-3xl text-center font-bold">Anime</h1></div>
-            <div class="grid grid-cols-6 gap-4">
+            <div class="grid grid-cols-6 py-2 px-2">
                 <div className="card-compact w-48 bg-warning rounded-lg" top>
                     <figure><img src={sergio} alt="anime" className=" rounded-t-lg box-content h-64 w-48" /></figure>
                     <div className="card-body">
@@ -34,14 +31,13 @@ function Anime(){
                 </div>
 
                 <div className="card-compact w-48 bg-base-100 group">
-                    <a href="/">
+                    <a href="/Drstonea">
                     <figure><img src={drpiedrota} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title group-hover:text-warning">
-                        dr stone
+                        Dr Stone
                             <div className="badge badge-info">NEW</div>
                         </h2>
-                        <p>"las piedras no son misticas pero el crack es eterno".</p>
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Anime</div> 
                             
@@ -57,7 +53,7 @@ function Anime(){
                         platinum end
                             <div className="badge badge-info">NEW</div>
                         </h2>
-                        <p>anime demo 3</p>
+                        
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Anime</div> 
                             
@@ -72,7 +68,7 @@ function Anime(){
                             Elden Ring
                             <div className="badge badge-info">NEW</div>
                         </h2>
-                        <p>Anime demo 4</p>
+                        
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Anime</div> 
                             
@@ -87,7 +83,7 @@ function Anime(){
                         bellaca wa
                             <div className="badge badge-info">NEW</div>
                         </h2>
-                        <p>anime demo 5</p>
+
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline">Anime</div> 
                             

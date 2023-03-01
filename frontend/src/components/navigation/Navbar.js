@@ -7,11 +7,11 @@ import sergio from 'assets/images/sergio.jpg'
 
 function Navbar({children}){
     return(
-      <div className="drawer sticky"> 
+      <div className="drawer static"> 
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
       <div className="drawer-content flex flex-col">
           {/* Navbar */}
-          <div className="sticky top-0 w-full navbar bg-primary ">
+          <div className="sticky top-0 w-full navbar bg-primary py-10">
               <div className="flex-none lg:hidden">
                   <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -19,7 +19,7 @@ function Navbar({children}){
               </div> 
           <div className="flex-1 px-2 mx-2">
             <a href="/">
-                <button>Konbini Anime</button>
+                <button className="px-10">Konbini Anime</button>
             </a>    
           </div>
           <div className="flex-none hidden lg:block">
