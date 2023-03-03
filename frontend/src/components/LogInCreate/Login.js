@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
 function Login(){
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -19,9 +18,10 @@ function Login(){
     })
       .then(response => {
         console.log(response.data);
-        navigate('/');
-        setIsLoggedIn(true); 
-        // handle successful login
+        navigate('/Profile');
+        setIsLoggedIn(true);
+        // Set cookies
+        
       })
       .catch(error => {
         setLoginFailed(true);
@@ -102,31 +102,7 @@ function Login(){
       </div>
     </form>
     </div>
-   /*
-    <div>
-        <form method='POST'>
-            <div>
-                <label id='email'>
-                    <input placeholder="Enter Your Email Here">
-
-                    </input>
-                </label>
-            </div>
-            <br></br>
-            <div>
-                <label id='password'>
-                    <input placeholder="Enter Your Password Here">
-
-                    </input>
-                </label>
-            </div>
-            <div>
-                <button className="btn">Login</button>
-            </div>
-
-        </form> 
-    </div> */
-    
+  
     )
 }
 
