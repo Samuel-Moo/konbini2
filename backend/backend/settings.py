@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
-    
+    'apianime',
+    'favorites',
+    'records',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +138,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST') 
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_COOKIE_NAME = 'mycsrftoken'
 SESSION_COOKIE_NAME = 'mysessionid'

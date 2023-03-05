@@ -12,7 +12,7 @@ function Perfil(){
     async function fetchData() {
       try {
         const csrftoken = Cookies.get('mycsrftoken'); // Get the csrf token from cookies
-        const response = await axios.get('http://127.0.0.1:8000/profile', {
+        const response = await axios.get('http://127.0.0.1:8000/retrieveUser', {
           headers: {'X-CSRFToken': csrftoken}
         });
         setUser(response.data);
@@ -25,9 +25,7 @@ function Perfil(){
     fetchData();
   }, []);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+
 
   return(
     <div className="card">

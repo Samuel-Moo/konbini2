@@ -28,6 +28,10 @@ from rest_framework import routers
 #import views from users
 from users import views
 from users.views import register_user, retrieveUser
+
+#import function anime
+from apianime.views import getTopAiringAnime, getAnimeMovies, getPopularAnime, getRecentReleaseAnime
+
 # create a router object
 router = routers.DefaultRouter()
 
@@ -38,12 +42,17 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
     path('login/', views.LoginView.as_view()),
 	# add another path to the url patterns
-	# when you visit the localhost:8000/api
+	# when you visit the localhost:8000
 	# you should be routed to the django Rest framework
 	path('todo/', include(router.urls)),
     path('profile/', views.ProfileView.as_view()),
     path('logout/', views.LogoutView.as_view()),
     path('register/', register_user, name='register_user'),
-    path('retrieveUser/', retrieveUser, name="retriveUser")
+    path('retrieveUser/', retrieveUser, name="retriveUser"),
+    path('anime/TopAiringAnime', getTopAiringAnime, name='TopAiring'),
+    path('anime/AnimeMovies', getAnimeMovies, name='AnimeMovies'),
+    path('anime/PopularAnime', getPopularAnime, name='PopularAnime'),
+    path('anime/RecentRelease', getRecentReleaseAnime, name='RecentRelease'),
+
 ]
 
