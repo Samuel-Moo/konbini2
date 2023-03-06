@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import Anime from "containers/pages/Anime";
 import Manga from "containers/pages/Manga";
 import Buscar from "containers/pages/Buscar";
-import Drstonea from "containers/pages/Anime-ep";
+import Animes from "containers/pages/Anime-ep";
 import LoginCreate from "containers/pages/LoginCreate";
 /* import {LoginButton, LogoutButton} from "containers/pages/login"; */
 import FavoritedA from "containers/pages/FavoritedA";
@@ -36,7 +36,7 @@ function App() {
           <Route path="/Anime" element={<Anime />} />
 
           {/*Dr stone Anime page*/}
-          <Route path="/Drstonea" element={<Drstonea />} />
+          <Route path="/Animes" element={<Animes />} />
 
           {/*Manga page */}
           <Route path="/Manga" element={<Manga />} />

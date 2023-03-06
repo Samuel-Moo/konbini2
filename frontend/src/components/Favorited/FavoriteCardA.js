@@ -6,7 +6,7 @@ function FavoriteCardA(){
     return(
         <div class="grid grid-cols-6 py-2 px-2">
                     <div className="card-compact w-48 bg-base-100 group flex" top>
-                    <a href="/Drstonea">
+                    <a href="/Animes">
                     <figure><img src={drpiedrota} alt="anime" className=" rounded-t-lg box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title group-hover:text-warning">
