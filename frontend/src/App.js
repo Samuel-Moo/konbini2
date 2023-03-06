@@ -16,7 +16,9 @@ import Settings from "containers/pages/Settings";
 
 import AVideo from "containers/pages/AVideo";
 import MangaLec from "containers/pages/MangaLec";
-import KaguyaM from "containers/pages/Manga-ep";
+import Mangas from "containers/pages/Manga-ep";
+
+import SearchPage from "containers/pages/SearchPage";
 
 
 function App() {
@@ -57,8 +59,11 @@ function App() {
           {/*Manga Lector */}
           <Route path="/MangaLec" element={<MangaLec />} />
 
-          {/*Manga page*/}
-          <Route path="/KaguyaM" element={<KaguyaM />} />
+          {/*Manga info page*/}
+          <Route path="/Mangas" element={<Mangas />} />
+
+          {/*Search Result page */}
+          <Route path="/SearchPage" element={<SearchPage/>}/>
 
 
           {/* 

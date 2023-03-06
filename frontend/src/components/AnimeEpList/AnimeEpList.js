@@ -11,10 +11,11 @@ function AnimeEpList(){
                     
         </div>
         <div class="col-start-2 col-end-6 row-start-1 row-end-1 bg-secondary">
-            <h1 className="text-3xl font-bold">Dr Stone</h1>
+            <h1 className="text-3xl font-bold">Insert title</h1>
                     
             <h2 className="text-2xl italic underline">Sinapsis</h2>
-            <p>Awakened into a world where humanity has been petrified, scientific genius Senku and his brawny friend Taiju use their skills to rebuild civilization.</p>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            </p>
         </div>
         <div className="overflow-y-auto col-start-2 col-end-5 row-end-3 h-80 w-120">
                     <table className="table w-full ">
@@ -33,7 +34,7 @@ function AnimeEpList(){
                                     </svg>
                                 </th>
                                 <td>Episode 1</td>
-                                <td>Dr Stone</td>
+                                <td>Anime</td>
                                 <td></td>
                                 </a>
                             </tr>

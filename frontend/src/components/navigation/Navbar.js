@@ -35,7 +35,8 @@ function Navbar({children}){
               </ul>
           </div>
           <div className="form-control">
-            <input type="text" placeholder="Search" className="input input-bordered bg-secondary" />
+            {/*"/SearchPage" es la pagina*/}<input type="text" placeholder="Search" className="input input-bordered bg-secondary" />
+            <input type="submit" value="submit" hidden/>
           </div>
           <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
