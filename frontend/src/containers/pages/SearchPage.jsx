@@ -12,7 +12,6 @@ function SearchPage(){
         <Layout>
            
             <Navbar>
-            
             <SearchResult/>
             <Footer/> 
             </Navbar>
