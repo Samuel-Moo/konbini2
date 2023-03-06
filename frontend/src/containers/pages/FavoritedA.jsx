@@ -1,19 +1,20 @@
 import Footer from "components/navigation/Footer"
+import Favorites from "components/Favorited/Favorites"
 import Navbar from "components/navigation/Navbar"
 import Layout from "hocs/layouts/layout"
-import Slider from "components/Slider/Slider"
+import FavoriteCardA from "components/Favorited/FavoriteCardA"
 
 
-
-function Home(){
+function FavoritedA(){
     return(
         <Layout data-theme="mosquera">
                 <Navbar>
-                <Slider />
+                <div className="py-4"><h1 className="text-3xl text-center font-bold">Favorited</h1></div>
                     
+                    <Favorites/>
                     
+                    <FavoriteCardA/>
                     
-                                        
                
                 <Footer/> 
                 </Navbar>     
@@ -21,4 +22,4 @@ function Home(){
     )
 }
 
-export default Home 
+export default FavoritedA 

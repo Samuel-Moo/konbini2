@@ -28,7 +28,7 @@ function Navbar({children}){
                   <li><a href="/">Home</a></li>
                   <li><a href="/Anime">Anime</a></li>
                   <li><a href="/Manga">Manga</a></li>
-                  <li><a href="/Favorited">Favorited</a></li>
+                  <li><a href="/FavoritedA">Favorited</a></li>
                   <li><a href="/LoginCreate">Log in</a></li>
                   
 
@@ -40,7 +40,7 @@ function Navbar({children}){
           <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src={sergio} />
+          <img src={sergio} alt="profile" />
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-primary rounded-box w-52">
@@ -66,7 +66,7 @@ function Navbar({children}){
                 <li><a href="/">Home</a></li>
                 <li><a href="/Anime">Anime</a></li>
                 <li><a href="/Manga">Manga</a></li>
-                <li><a href="/Favorited">Favorited</a></li>
+                <li><a href="/FavoritedA">Favorited</a></li>
                 <li><a href="/Log in">Log in</a></li>
               
 

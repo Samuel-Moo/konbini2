@@ -9,7 +9,8 @@ import Buscar from "containers/pages/Buscar";
 import Drstonea from "containers/pages/Anime-ep";
 import LoginCreate from "containers/pages/LoginCreate";
 /* import {LoginButton, LogoutButton} from "containers/pages/login"; */
-import Favorited from "containers/pages/Favorited";
+import FavoritedA from "containers/pages/FavoritedA";
+import FavoritedM from "containers/pages/FavoritedM";
 import Profile from "containers/pages/Profile";
 import Settings from "containers/pages/Settings";
 
@@ -38,8 +39,11 @@ function App() {
           {/*Manga page */}
           <Route path="/Manga" element={<Manga />} />
 
-          {/*Favorites page */}
-          <Route path="/Favorited" element={<Favorited />}/>
+          {/*Favorite anime page */}
+          <Route path="/FavoritedA" element={<FavoritedA />}/>
+
+          {/*Favorites manga page */}
+          <Route path="/FavoritedM" element={<FavoritedM />}/>
 
           {/*Buscar page */}
           <Route path="/Buscar" element={<Buscar />} />
