@@ -30,11 +30,22 @@ def getAnimeMovies(request):
     data = response.json()
     return JsonResponse(data, safe=False)
 
+
 @api_view(['GET'])
 @authentication_classes([])
 @permission_classes([])
 def search(request, query):
     url = f"https://gogoanime.consumet.stream/search?keyw={query}"
+    response = requests.get(url)
+    results = response.json()
+    return JsonResponse(results, safe=False)
+
+
+@api_view(['GET'])
+@authentication_classes([])
+@permission_classes([])
+def getAnimeDetails(request, animeId):
+    url = f"https://gogoanime.consumet.stream/anime-details/{animeId}"
     response = requests.get(url)
     results = response.json()
     return JsonResponse(results, safe=False)

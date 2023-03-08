@@ -1,17 +1,31 @@
 import { connect } from "react-redux"
 import drpiedrota from "assets/images/drpiedrota.jpg"
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 function AnimeEpList(){
+    const { id } = useParams();
+    const [anime, setAnime] = useState('');
+
+
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/anime/details/${id}/').then((response) => {
+            setAnime(response.data);
+          });
+      }, [id])
+
     return(
 
-<div class="grid grid-rows-2 grid-col-5">
+    <div class="grid grid-rows-2 grid-col-5">
         <div className="row-start-1 row-end-1 px-2 py-2">
                     
-            <figure><img src={drpiedrota} alt="anime" className=" rounded-lg box-content h-80 w-64 border-4"/></figure>
+            <figure><img src={id} alt="anime" className=" rounded-lg box-content h-80 w-64 border-4"/></figure>
                         
                     
         </div>
         <div class="col-start-2 col-end-6 row-start-1 row-end-1 bg-secondary">
-            <h1 className="text-3xl font-bold">Insert title</h1>
+            <h1 className="text-3xl font-bold">{id}</h1>
                     
             <h2 className="text-2xl italic underline">Sinapsis</h2>
             <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt

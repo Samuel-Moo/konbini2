@@ -31,7 +31,7 @@ from users.views import register_user, retrieveUser
 
 #import function anime
 from apianime.views import getTopAiringAnime, getAnimeMovies, getPopularAnime, getRecentReleaseAnime
-from apianime.views import search
+from apianime.views import search, getAnimeDetails
 # create a router object
 router = routers.DefaultRouter()
 
@@ -51,5 +51,8 @@ urlpatterns = [
     path('anime/PopularAnime', getPopularAnime, name='PopularAnime'),
     path('anime/RecentRelease', getRecentReleaseAnime, name='RecentRelease'),
     path('anime/search/<str:query>/', search),
+    path('anime/details/<str:animeId>/', getAnimeDetails),
+
+    
 ]
 

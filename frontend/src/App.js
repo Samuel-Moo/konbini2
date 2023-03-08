@@ -13,11 +13,9 @@ import FavoritedA from "containers/pages/FavoritedA";
 import FavoritedM from "containers/pages/FavoritedM";
 import Profile from "containers/pages/Profile";
 import Settings from "containers/pages/Settings";
-
 import AVideo from "containers/pages/AVideo";
 import MangaLec from "containers/pages/MangaLec";
 import Mangas from "containers/pages/Manga-ep";
-
 import SearchPage from "containers/pages/SearchPage";
 
 
@@ -36,8 +34,7 @@ function App() {
           <Route path="/Anime" element={<Anime />} />
 
           {/*Dr stone Anime page*/}
-          <Route path="/Animes" element={<Animes />} />
-
+          <Route path="/Animes/:id" element={<Animes />} />
           {/*Manga page */}
           <Route path="/Manga" element={<Manga />} />
 
@@ -64,6 +61,7 @@ function App() {
 
           {/*Search Result page */}
           <Route path="/SearchPage" element={<SearchPage/>}/>
+
 
 
           {/* 

@@ -4,21 +4,15 @@ import Layout from "hocs/layouts/layout"
 
 import AnimeEpList from "components/AnimeEpList/AnimeEpList"
 
-function Drstonea(){
+function Animes(){
     return(
         <Layout>
-            <Navbar>
-            
-                {/*las listas de anime necesitan un arreglo en que no pase encima la navbar*/}
-                
-                
-                
+            <Navbar>                
                 <AnimeEpList/>
-            
             <Footer/> 
             </Navbar>
         </Layout>
     )
 }
 
-export default Drstonea 
+export default Animes 
