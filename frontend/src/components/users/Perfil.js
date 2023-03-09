@@ -5,14 +5,14 @@ import perfil from "assets/images/perfil.jpg";
 import Cookies from 'js-cookie';
 
 function Perfil(){
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
       try {
         const csrftoken = Cookies.get('mycsrftoken'); // Get the csrf token from cookies
-        const response = await axios.get('http://127.0.0.1:8000/retrieveUser', {
+        const response = await axios.get('http://127.0.0.1:8000/profile', {
           headers: {'X-CSRFToken': csrftoken}
         });
         setUser(response.data);
