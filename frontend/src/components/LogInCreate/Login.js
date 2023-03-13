@@ -18,7 +18,7 @@ function Login(){
     })
       .then(response => {
         console.log(response.data);
-        navigate('/Profile');
+        navigate('/');
         setIsLoggedIn(true);
         // Set cookies
         
