@@ -1,35 +1,53 @@
 import { connect } from "react-redux"
-import drpiedrota from "assets/images/drpiedrota.jpg"
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 function AnimeEpList(){
     const { id } = useParams();
-    const [anime, setAnime] = useState('');
+    const [anime, setAnime] = useState([]);
+    const [genres, setGenres] = useState([]);
+    const [episodes, setEpisodes] = useState([]);
 
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/anime/details/${id}/').then((response) => {
+        axios.get(`http://127.0.0.1:8000/anime/details/${id}/`).then((response) => {
             setAnime(response.data);
+            setGenres(response.data.genres);
+            setEpisodes(response.data.episodesList);
           });
       }, [id])
 
     return(
+       
 
     <div class="grid grid-rows-2 grid-col-5">
+
         <div className="row-start-1 row-end-1 px-2 py-2">
                     
-            <figure><img src={id} alt="anime" className=" rounded-lg box-content h-80 w-64 border-4"/></figure>
+            <figure><img src={anime.animeImg} alt="anime" className=" rounded-lg box-content h-80 w-64 border-4"/></figure>
                         
                     
         </div>
         <div class="col-start-2 col-end-6 row-start-1 row-end-1 bg-secondary">
-            <h1 className="text-3xl font-bold">{id}</h1>
+            <h1 className="text-3xl font-bold">{anime.animeTitle}</h1>
+            <p>Other Names: {anime.otherNames} </p>
+            <p>Total Episodes: {anime.totalEpisodes}</p>
                     
             <h2 className="text-2xl italic underline">Sinapsis</h2>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            <p>{anime.synopsis}
             </p>
+            <h2 className="text-xl italic underline">Status</h2>
+            <p>{anime.status}
+            </p>
+            <h2 className="text-xl italic underline">Release Date</h2>
+            <p>{anime.releasedDate}
+            </p>
+            <h2 className="text-xl italic underline">Genres</h2>
+            {genres.map(genre => (
+          <p key={genre}>{genre} </p> 
+        ))}
+
         </div>
         <div className="overflow-y-auto col-start-2 col-end-5 row-end-3 h-80 w-120">
                     <table className="table w-full ">
@@ -39,6 +57,7 @@ function AnimeEpList(){
                             </tr>
                         </thead>
                         <tbody>
+                            {episodes.map(eps => (
                             <tr>
                                 <a href="/AVideo" className="hover:text-warning">
                                 <th>
@@ -47,22 +66,24 @@ function AnimeEpList(){
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
                                     </svg>
                                 </th>
-                                <td>Episode 1</td>
-                                <td>Anime</td>
+                                <td key={eps.episodeId}>Episode {eps.episodeNum}</td>
                                 <td></td>
                                 </a>
                             </tr>
+                            ))}
                             
                             
                         </tbody>
                     </table>
-                </div>
+                </div>  
             </div>
+            
+           
                 )
             }
-                const mapStateToProps=state=>({
+const mapStateToProps=state=>({
 
-                })
-                export default connect(mapStateToProps,{
+})
+export default connect(mapStateToProps,{
                 
-                }) (AnimeEpList)
+}) (AnimeEpList)

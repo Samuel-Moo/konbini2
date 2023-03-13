@@ -1,6 +1,6 @@
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
-import Layout from "hocs/layouts/layout"
+import Layout from "containers/hocs/layouts/layout"
 
 import TopAiringAnime from "components/Animecard/TopAiringAnime"
 import AnimeMovies from "components/Animecard/AnimeMovies"

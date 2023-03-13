@@ -49,3 +49,14 @@ def getAnimeDetails(request, animeId):
     response = requests.get(url)
     results = response.json()
     return JsonResponse(results, safe=False)
+
+
+
+@api_view(['GET'])
+@authentication_classes([])
+@permission_classes([])
+def get(request, animeId):
+    url = f"https://gogoanime.consumet.stream/anime-details/{animeId}"
+    response = requests.get(url)
+    results = response.json()
+    return JsonResponse(results, safe=False)
