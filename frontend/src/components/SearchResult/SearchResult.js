@@ -18,9 +18,9 @@ function SearchResult(){
         
         <div>
         <form onSubmit={handleSubmit}>
-            <div className="form-control">
-                <input type="text" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search" className="input input-bordered bg-secondary" />   
-                <input type="submit" value="submit" className="btn" />
+            <div className="form-control px-2 py-2">
+                <input type="text" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search" className="input input-bordered bg-secondary  box-content w-48 " />   
+                <input type="submit" value="submit" className="" hidden/>
             </div>
         </form>
         {results.length === 0 ? (
