@@ -24,8 +24,8 @@ function SearchResult(){
         
         <div>
         <form onSubmit={handleSubmit}>
-            <div className="form-control px-2 py-2">
-                <input type="text" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search" className="input input-bordered bg-secondary  box-content w-48 " />   
+            <div className="form-control px-2 py-2 place-items-center">
+                <input type="text" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Look anime, movies, and OVAS" className="input input-bordered bg-secondary  box-content w-80 " />   
                 <input type="submit" value="submit" className="" hidden/>
             </div>
         </form>
