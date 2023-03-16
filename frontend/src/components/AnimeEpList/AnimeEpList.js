@@ -1,9 +1,10 @@
 import { connect } from "react-redux"
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 function AnimeEpList(){
+    const navigate = useNavigate();
     const { id } = useParams();
     const [anime, setAnime] = useState([]);
     const [genres, setGenres] = useState([]);
@@ -17,6 +18,9 @@ function AnimeEpList(){
             setEpisodes(response.data.episodesList);
           });
       }, [id])
+      const handleAnimeCardClick = (episodeId) => {
+        navigate(`/AVideo/${episodeId}`);
+      };
 
     return(
        
@@ -59,7 +63,7 @@ function AnimeEpList(){
                         <tbody>
                             {episodes.map(eps => (
                             <tr>
-                                <a href="/AVideo" className="hover:text-warning">
+                                <div onClick={() => handleAnimeCardClick(eps.episodeId)}>
                                 <th>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -68,7 +72,7 @@ function AnimeEpList(){
                                 </th>
                                 <td key={eps.episodeId}>Episode {eps.episodeNum}</td>
                                 <td></td>
-                                </a>
+                                </div>
                             </tr>
                             ))}
                             

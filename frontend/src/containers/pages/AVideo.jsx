@@ -1,43 +1,26 @@
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
 import Layout from "containers/hocs/layouts/layout"
-import VideoJS from 'components/content/Video'
-import React from "react"
-import { render } from 'react-dom'
-import ReactAwesomePlayer from 'react-awesome-player'
+import { connect } from "react-redux"
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function AVideo(){
-    const playerRef = React.useRef(null);
 
-  const videoJsOptions = {
-    autoplay: true,
-    controls: true,
-    responsive: true,
-    fluid: true,
-    sources: [{
-      src: 'https://www019.vipanicdn.net/streamhls/3156f3d297890e087320879cdfce8e23/ep.1.1677608214.m3u8',
-      type: 'application/x-mpegURL',
-      withCredentials: true
-    }]
-  };
+    const { idEp } = useParams();
+    const [ video, setVideo ] = useState([]);
 
-  const handlePlayerReady = (player) => {
-    playerRef.current = player;
-
-    // You can handle player events here, for example:
-    player.on('waiting', () => {
-      VideoJS.log('player is waiting');
-    });
-
-    player.on('dispose', () => {
-      VideoJS.log('player will dispose');
-    });
-  };
+    useEffect(() => {
+      axios.get(`http://127.0.0.1:8000/anime/episodes/${idEp}/`).then((response) => {
+            setVideo(response.data);
+        });
+    }, [idEp])
 
     return(
         <Layout>
             <Navbar>
-            <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+            <iframe className="w-2/3 aspect-video" src={video.Referer} ></iframe> 
             <Footer/> 
             </Navbar>
         </Layout>
