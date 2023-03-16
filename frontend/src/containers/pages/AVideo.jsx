@@ -20,7 +20,8 @@ function AVideo(){
     return(
         <Layout>
             <Navbar>
-            <iframe className="w-2/3 aspect-video" src={video.Referer} ></iframe> 
+            
+            <iframe className="w-2/3 aspect-video self-center" src={video.Referer} allowFullScreen ></iframe> 
             <Footer/> 
             </Navbar>
         </Layout>
