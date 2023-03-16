@@ -1,14 +1,43 @@
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
 import Layout from "containers/hocs/layouts/layout"
-import drpiedrota from "assets/images/drpiedrota.jpg"
-
+import VideoJS from 'components/content/Video'
+import React from "react"
+import { render } from 'react-dom'
+import ReactAwesomePlayer from 'react-awesome-player'
 
 function AVideo(){
+    const playerRef = React.useRef(null);
+
+  const videoJsOptions = {
+    autoplay: true,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [{
+      src: 'https://www019.vipanicdn.net/streamhls/3156f3d297890e087320879cdfce8e23/ep.1.1677608214.m3u8',
+      type: 'application/x-mpegURL',
+      withCredentials: true
+    }]
+  };
+
+  const handlePlayerReady = (player) => {
+    playerRef.current = player;
+
+    // You can handle player events here, for example:
+    player.on('waiting', () => {
+      VideoJS.log('player is waiting');
+    });
+
+    player.on('dispose', () => {
+      VideoJS.log('player will dispose');
+    });
+  };
+
     return(
         <Layout>
             <Navbar>
-            <iframe id="ifr" allow="fullscreen" src="https://www011.vipanicdn.net/streamhls/0789fd4f049c3ca2a49b860ea5d1f456/ep.5.1677608038.m3u8" width="1024" height="650" ></iframe>
+            <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
             <Footer/> 
             </Navbar>
         </Layout>
