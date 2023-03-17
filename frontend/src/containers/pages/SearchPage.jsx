@@ -2,7 +2,7 @@
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
 import SearchResult from "components/SearchResult/SearchResult"
-import Layout from "hocs/layouts/layout"
+import Layout from "containers/hocs/layouts/layout"
 
 
 

@@ -1,7 +1,7 @@
 import Mangacard from "components/Mangacard/Mangacard"
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
-import Layout from "hocs/layouts/layout"
+import Layout from "containers/hocs/layouts/layout"
 
 
 
