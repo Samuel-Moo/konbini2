@@ -1,6 +1,7 @@
 import { connect } from "react-redux"
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import tohime from "assets/images/tohime.png";
 
 function SearchResult(){
     const [query, setQuery] = useState('');
@@ -24,11 +25,20 @@ function SearchResult(){
             </div>
         </form>
         {results.length === 0 ? (
-                <div className="alert shadow-lg">
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-info flex-shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span>No Result Found</span>
-                </div>
+                <div className="alert shadow-lg flex flex-col">
+                    
+                <div className=" box-border w-1/4 static inset-x-0 ">
+
+                    <img src={tohime} alt="error"  className=""/>
+                    
+                  </div>
+                  
+                  <div className="static inset-x-0 bottom-0">
+                    No Result Found, please check again the name for any misspelling.
+                    </div>
+                
+                
+                
               </div>
         ) : ( <div class="grid grid-cols-6 px-2 py-2">
         {results.map((anime) => (
