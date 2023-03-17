@@ -49,7 +49,7 @@ function AnimeEpList(){
             </p>
             <h2 className="text-xl italic underline">Genres</h2>
             {genres.map(genre => (
-          <p key={genre}>{genre} </p> 
+          <p key={genre} > {genre} </p> 
         ))}
 
         </div>
