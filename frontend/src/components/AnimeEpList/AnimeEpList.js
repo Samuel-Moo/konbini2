@@ -54,22 +54,22 @@ function AnimeEpList(){
 
         </div>
         <div className="overflow-y-auto col-start-2 col-end-5 row-end-3 h-80 w-120">
-                    <table className="table w-full ">
-                        <thead>
+                    <table className="table w-full static">
+                        <thead className="static">
                             <tr>
-                                <th className="fixed">Episodes</th>
+                                <td className="">Episodes</td>
                             </tr>
                         </thead>
                         <tbody>
                             {episodes.map(eps => (
                             <tr>
                                 <div onClick={() => handleAnimeCardClick(eps.episodeId)} className="hover:text-warning">
-                                <th>
+                                <td>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
                                     </svg>
-                                </th>
+                                </td>
                                 <td key={eps.episodeId}>Episode {eps.episodeNum}</td>
                                 <td></td>
                                 </div>
