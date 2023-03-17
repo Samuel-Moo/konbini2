@@ -6,17 +6,17 @@ import { Provider } from "react-redux";
 import Anime from "containers/pages/Anime";
 import Manga from "containers/pages/Manga";
 import Buscar from "containers/pages/Buscar";
-import Drstonea from "containers/pages/Anime-ep";
+import Animes from "containers/pages/Anime-ep";
 import LoginCreate from "containers/pages/LoginCreate";
 /* import {LoginButton, LogoutButton} from "containers/pages/login"; */
 import FavoritedA from "containers/pages/FavoritedA";
 import FavoritedM from "containers/pages/FavoritedM";
 import Profile from "containers/pages/Profile";
 import Settings from "containers/pages/Settings";
-
 import AVideo from "containers/pages/AVideo";
 import MangaLec from "containers/pages/MangaLec";
-import KaguyaM from "containers/pages/Manga-ep";
+import Mangas from "containers/pages/Manga-ep";
+import SearchPage from "containers/pages/SearchPage";
 
 
 function App() {
@@ -34,10 +34,12 @@ function App() {
           <Route path="/Anime" element={<Anime />} />
 
           {/*Dr stone Anime page*/}
-          <Route path="/Drstonea" element={<Drstonea />} />
-
+          <Route path="/Animes/:id" element={<Animes />} />
+         
+           {/*Anime Player*/}
+          <Route path="/AVideo/:idEp" element={<AVideo />} />
           {/*Manga page */}
-          <Route path="/Manga" element={<Manga />} />
+          <Route path="/Manga" element={<Manga />} /> 
 
           {/*Favorite anime page */}
           <Route path="/FavoritedA" element={<FavoritedA />}/>
@@ -51,14 +53,16 @@ function App() {
           {/*Login page */}
           <Route path="/LoginCreate" element={<LoginCreate />} />
 
-          {/*Anime Player*/}
-          <Route path="/AVideo" element={<AVideo />} />
-
+         
           {/*Manga Lector */}
           <Route path="/MangaLec" element={<MangaLec />} />
 
-          {/*Manga page*/}
-          <Route path="/KaguyaM" element={<KaguyaM />} />
+          {/*Manga info page*/}
+          <Route path="/Mangas" element={<Mangas />} />
+
+          {/*Search Result page */}
+          <Route path="/SearchPage" element={<SearchPage/>}/>
+
 
 
           {/* 

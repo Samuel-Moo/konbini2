@@ -1,11 +1,10 @@
 import { connect } from "react-redux"
-import { NavLink } from "react-router-dom"
-import Logo1 from 'assets/images/logo_1.jpg'
-import Logo2 from 'assets/images/Logo_2.jpg'
 import sergio from 'assets/images/sergio.jpg'
 
 
 function Navbar({children}){
+
+
     return(
       <div className="drawer static"> 
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
@@ -29,14 +28,15 @@ function Navbar({children}){
                   <li><a href="/Anime">Anime</a></li>
                   <li><a href="/Manga">Manga</a></li>
                   <li><a href="/FavoritedA">Favorited</a></li>
+                  <li><a href="/SearchPage">Search</a></li>
                   <li><a href="/LoginCreate">Log in</a></li>
-                  
-
               </ul>
           </div>
-          <div className="form-control">
-            <input type="text" placeholder="Search" className="input input-bordered bg-secondary" />
-          </div>
+
+{/*"/SearchPage" es la pagina*/}
+
+{/*End Of SearchBar*/}
+
           <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
@@ -67,7 +67,8 @@ function Navbar({children}){
                 <li><a href="/Anime">Anime</a></li>
                 <li><a href="/Manga">Manga</a></li>
                 <li><a href="/FavoritedA">Favorited</a></li>
-                <li><a href="/Log in">Log in</a></li>
+                <li><a href="/SearchPage">Search</a></li>
+                <li><a href="/LoginCreate">Log in</a></li>
               
 
           </ul>

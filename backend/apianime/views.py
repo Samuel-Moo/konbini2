@@ -1,6 +1,9 @@
 import requests
 from django.http import JsonResponse
-
+from rest_framework.decorators import api_view
+from rest_framework.decorators import permission_classes
+from rest_framework.decorators import authentication_classes
+from django.http import JsonResponse
 
 def getTopAiringAnime(request):
     url = 'https://gogoanime.consumet.stream/top-airing'
@@ -26,3 +29,34 @@ def getAnimeMovies(request):
     response = requests.get(url)
     data = response.json()
     return JsonResponse(data, safe=False)
+
+
+@api_view(['GET'])
+@authentication_classes([])
+@permission_classes([])
+def search(request, query):
+    url = f"https://gogoanime.consumet.stream/search?keyw={query}"
+    response = requests.get(url)
+    results = response.json()
+    return JsonResponse(results, safe=False)
+
+
+@api_view(['GET'])
+@authentication_classes([])
+@permission_classes([])
+def getAnimeDetails(request, animeId):
+    url = f"https://gogoanime.consumet.stream/anime-details/{animeId}"
+    response = requests.get(url)
+    results = response.json()
+    return JsonResponse(results, safe=False)
+
+
+
+@api_view(['GET'])
+@authentication_classes([])
+@permission_classes([])
+def getAnimeEpisode(request, episodeId):
+    url = f"https://gogoanime.consumet.stream/vidcdn/watch/{episodeId}"
+    response = requests.get(url)
+    results = response.json()
+    return JsonResponse(results, safe=False)

@@ -1,9 +1,9 @@
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
-import Layout from "hocs/layouts/layout"
+import Layout from "containers/hocs/layouts/layout"
 
 import MangaEpList from "components/MangeEpList/MangaEpList"
-function KaguyaM(){
+function Mangas(){
     return(
         <Layout>
             <Navbar>
@@ -17,4 +17,4 @@ function KaguyaM(){
     )
 }
 
-export default KaguyaM 
+export default Mangas 

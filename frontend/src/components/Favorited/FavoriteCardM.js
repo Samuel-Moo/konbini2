@@ -9,7 +9,7 @@ function FavoriteCardM(){
                 
 
                 <div className="card-compact w-48 bg-base-100 group" top>
-                    <a href="/KaguyaM">
+                    <a href="/Mangas">
                     <figure><img src= {loveiswar} alt="manga" className="box-content h-64 w-48"/></figure>
                     <div className="card-body">
                         <h2 className="card-title group-hover:text-warning">
