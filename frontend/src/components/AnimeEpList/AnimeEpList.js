@@ -57,17 +57,12 @@ function AnimeEpList(){
         ))}
 
         </div>
-<<<<<<< HEAD
+
         <div className="overflow-y-auto col-start-2 col-end-5 row-end-3 h-80 w-120 static">
                     <table className="table w-full static">
                         <thead className="static">
                             <tr className="">
-=======
-        <div className="overflow-y-auto col-start-2 col-end-5 row-end-3 h-80 w-120">
-                    <table className="table w-full static">
-                        <thead className="static">
-                            <tr>
->>>>>>> 7989f09cb9b7cc1f84ac96b439e05e5c8019c099
+
                                 <td className="">Episodes</td>
                             </tr>
                         </thead>
@@ -75,13 +70,10 @@ function AnimeEpList(){
                             {episodes.map(eps => (
                             <tr className="static">
                                 <div onClick={() => handleAnimeCardClick(eps.episodeId)} className="hover:text-warning">
-<<<<<<< HEAD
+
                                 <td className="static">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 static">
-=======
-                                <td>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
->>>>>>> 7989f09cb9b7cc1f84ac96b439e05e5c8019c099
+
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
                                     </svg>
