@@ -13,7 +13,7 @@ function Home(){
                 <Navbar>
                     
                 <Slider />
-                <div className="py-4"><h1 className="text-3xl text-center font-bold">Recent Releases</h1></div>
+                <div className="py-4"><h1 className="text-3xl text-center font-bold">New Episodes</h1></div>
                 <RecentReleases/>
                 <div className="py-4"><h1 className="text-3xl text-center font-bold">Top Airing Anime</h1></div>
                 <TopAiringAnime/>
