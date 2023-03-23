@@ -37,28 +37,28 @@ function AnimeEpList(){
                 </button>          
             </div>        
         </div>
-        <div class="col-start-2 col-end-6 row-start-1 row-end-1 bg-secondary">
+        <div class="col-start-2 col-end-6 row-start-1 row-end-1 bg-secondary rounded">
             <h1 className="text-3xl font-bold">{anime.animeTitle}</h1>
-            <p>Other Names: {anime.otherNames} </p>
-            <p>Total Episodes: {anime.totalEpisodes}</p>
+            <p className="badge badge-base-100">Other Names: {anime.otherNames} </p>
+            <p className="badge badge-accent">Total Episodes: {anime.totalEpisodes}</p>
                     
             <h2 className="text-2xl italic underline">Sinapsis</h2>
             <p>{anime.synopsis}
             </p>
-            <h2 className="text-xl italic badge badge-success">Status</h2>
-            <p className="italic underline">{anime.status}
+            <h2 className="text-xl italic underline text-accent list-disc">Status</h2>
+            <p className="italic badge badge-success">{anime.status}
             </p>
-            <h2 className="text-xl badge badge-neutral">Release Date</h2>
-            <p className="italic">{anime.releasedDate}
+            <h2 className="text-xl italic underline text-neutral">Release Date</h2>
+            <p className="italic badge badge-neutral">{anime.releasedDate}
             </p>
-            <h2 className="text-xl italic underline">Genres</h2>
+            <h2 className="text-xl italic underline text-error">Genres</h2>
             {genres.map(genre => (
           <p className="badge badge-error" key={genre} > {genre} </p> 
         ))}
 
         </div>
 
-        <div className="overflow-y-auto col-start-2 col-end-5 row-end-3 h-80 w-120 static">
+        <div className="overflow-y-auto col-start-2 col-end-5 row-end-3 h-80 w-full static py-3">
                     <table className="table w-full static">
                         <thead className="static">
                             <tr className="">
@@ -78,8 +78,9 @@ function AnimeEpList(){
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
                                     </svg>
                                 </td>
-                                <td key={eps.episodeId}>Episode {eps.episodeNum}</td>
-                                <td></td>
+                                
+                                <td  key={eps.episodeId}>Episode {eps.episodeNum}</td>
+                                
                                 </div>
                             </tr>
                             ))}
