@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from .serializers import UserLoginSerializer, UserRegisterSerializer, UserSerializer
 from rest_framework import permissions, status
 from .validations import custom_validation, validate_email, validate_password, validate_username
+from django.http import JsonResponse
 
 class UserRegister(APIView):
     permission_classes = (permissions.AllowAny,)
@@ -45,3 +46,6 @@ class UserView(APIView):
     
     
     
+def retrieveUser(request):
+    user = request.user
+    return JsonResponse({'username': user.username, 'email': user.email})

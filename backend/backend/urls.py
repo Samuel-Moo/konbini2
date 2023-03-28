@@ -32,6 +32,11 @@ from users import views
 #import function anime
 from apianime.views import getTopAiringAnime, getAnimeMovies, getPopularAnime, getRecentReleaseAnime
 from apianime.views import search, getAnimeDetails, getAnimeEpisode
+
+#import manga api
+from apimanga.views import searchManga, getMangaDetails, getMangaImages
+from users.views import retrieveUser
+
 # create a router object
 router = routers.DefaultRouter()
 
@@ -44,7 +49,7 @@ urlpatterns = [
     path('register/', views.UserRegister.as_view(), name='register'),
     path('login/', views.UserLogin.as_view(), name='login'),
     path('logout/', views.UserLogout.as_view(), name='logout'),
-    path('user/', views.UserView.as_view(), name='user'),
+    path('user/', retrieveUser, name='user'),
     path('anime/TopAiringAnime', getTopAiringAnime, name='TopAiring'),
     path('anime/AnimeMovies', getAnimeMovies, name='AnimeMovies'),
     path('anime/PopularAnime', getPopularAnime, name='PopularAnime'),
@@ -52,6 +57,9 @@ urlpatterns = [
     path('anime/search/<str:query>/', search),
     path('anime/details/<str:animeId>/', getAnimeDetails),
     path('anime/episodes/<str:episodeId>/', getAnimeEpisode),
+    path('manga/search/<str:queryManga>/', searchManga, name='searchManga'),
+    path('manga/details/<str:mangaId>/', getMangaDetails, name='mangaDetails'),
+    path('manga/chapters/<str:chapterId>/', getMangaImages, name='mangaChapters'),
 
 
     
