@@ -17,7 +17,7 @@ function MangaEpList(){
             setManga(response.data);
             setGenres(response.data.genres);
             setChapters(response.data.chapters);
-            setAuthors(response.data.authors)
+            setAuthors(response.data.authors);
           });
       }, [idManga])
       const handleAnimeCardClick = (chapterId) => {
