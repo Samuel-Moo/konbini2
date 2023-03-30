@@ -79,6 +79,7 @@ function App() {
           <Route path="/Profile" element={<Profile />} />
 
           <Route path="/Settings" element={<Settings />} />
+          
 
         </Routes>
       </Router>

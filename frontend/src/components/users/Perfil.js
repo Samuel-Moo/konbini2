@@ -3,19 +3,16 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import perfil from "assets/images/perfil.jpg";
 
-axios.defaults.xsrfCookieName = 'csrftoken';
-axios.defaults.xsrfHeaderName = 'X-CSRFToken';
-axios.defaults.withCredentials = true;
 
 function Perfil(){
   const [user, setUser] = useState([]);
 
-  
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/user/`).then((response) => {
+    axios.get(`http://127.0.0.1:8000/user/`, { withCredentials: true }).then((response) => {
         setUser(response.data);
+        console.log(response.data);
       });
-  })
+  }, [])
 
   return(
 

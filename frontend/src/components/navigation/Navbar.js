@@ -1,9 +1,27 @@
 import { connect } from "react-redux"
 import sergio from 'assets/images/sergio.jpg'
+import axios from "axios";
+import Cookies from "js-cookie";
 
 
 function Navbar({children}){
 
+
+
+  const handleLogout = (event) => {
+    event.preventDefault();
+    axios.post('http://127.0.0.1:8000/logout/', {withCredentials : true})
+    .then(response => {
+      console.log(response.status);
+      console.log("Deslogueo Completo");
+      Cookies.remove('sessionid'); // remove sessionid cookie
+      alert("Se ha deslogueado");
+    })
+    .catch(error => {
+      console.log("Hubo un error: ")
+      console.log(error)
+    });
+  };
 
     return(
       <div className="drawer static"> 
@@ -55,7 +73,7 @@ function Navbar({children}){
         </li>
         <li><a href="/Settings" className="justify-between">
           Settings </a></li>
-        <li><a>Logout</a></li>
+        <li><a onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>
           </div>
