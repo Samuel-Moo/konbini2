@@ -6,6 +6,9 @@ from .serializers import UserLoginSerializer, UserRegisterSerializer, UserSerial
 from rest_framework import permissions, status
 from .validations import custom_validation, validate_email, validate_password, validate_username
 from django.http import JsonResponse
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 
 class UserRegister(APIView):
     permission_classes = (permissions.AllowAny,)
@@ -17,7 +20,7 @@ class UserRegister(APIView):
             if user: 
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(status=status.HTTP_400_BAD_REQUEST)
-    
+
 class UserLogin(APIView):
     permission_classes = (permissions.AllowAny,)
     authentication_classes = (SessionAuthentication,)
@@ -30,8 +33,10 @@ class UserLogin(APIView):
             user = serializer.check_user(data)
             login(request, user)
             return Response(serializer.data, status=status.HTTP_200_OK)
-        
+
+
 class UserLogout(APIView):
+    permission_classes = (permissions.AllowAny,)
     def post(self, request):
         logout(request)
         return Response(status=status.HTTP_200_OK)
@@ -45,7 +50,8 @@ class UserView(APIView):
     
     
     
-    
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def retrieveUser(request):
     user = request.user
     return JsonResponse({'username': user.username, 'email': user.email})

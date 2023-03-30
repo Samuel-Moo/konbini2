@@ -3,9 +3,6 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-axios.defaults.xsrfCookieName = 'csrftoken';
-axios.defaults.xsrfHeaderName = 'X-CSRFToken';
-axios.defaults.withCredentials = true;
 
 function Login(){
   const navigate = useNavigate();
@@ -21,12 +18,12 @@ function Login(){
     axios.post('http://127.0.0.1:8000/login/', {
       email: email,
       password: password,
-    })
+    }, {withCredentials : true})
       .then(response => {
         console.log(response.data);
         navigate('/');
         setIsLoggedIn(true);
-        // Set cookies
+        
         
       })
       .catch(error => {
