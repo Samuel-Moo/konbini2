@@ -46,12 +46,12 @@ function MangaEpList(){
             <h2 className="text-2xl italic underline">Sinapsis</h2>
             <p>{manga.description}
             </p>
-            <h2 className="text-xl italic underline text-accent list-disc">Status</h2>
+            <h2 className="text-xl italic underline text-success list-disc">Status</h2>
             <p className="italic badge badge-success">{manga.status}
             </p>
-            <h2 className="text-xl italic underline text-neutral">Authors</h2>
+            <h2 className="text-xl italic underline text-warning">Authors</h2>
             {author.map(authors => (
-          <p className="badge badge-error" key={authors} > {authors} </p> 
+          <p className="badge badge-warning" key={authors} > {authors} </p> 
         ))}
             <h2 className="text-xl italic underline text-error">Genres</h2>
             {genres.map(genre => (

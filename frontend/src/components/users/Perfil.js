@@ -24,8 +24,7 @@ function Perfil(){
           <h1>Nombre de usuario: {user.username} </h1>
         </header>
         <section className="profile-body">
-          <p>Nombre:  </p>
-          <p>Apellido: </p>
+
           <p>Email: {user.email} </p>
         </section>
       </div>

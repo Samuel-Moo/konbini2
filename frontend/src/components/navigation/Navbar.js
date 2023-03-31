@@ -7,8 +7,21 @@ import Cookies from "js-cookie";
 function Navbar({children}){
 
 
-
-  const handleLogout = (event) => {
+  function handleLogout(event){
+    event.preventDefault();
+    axios.post('http://127.0.0.1:8000/logout/', {withCredentials : true})
+    .then(response => {
+      console.log(response.status);
+      console.log("Deslogueo Completo");
+      Cookies.remove('sessionid'); // remove sessionid cookie
+      alert("Se ha deslogueado");
+    })
+    .catch(error => {
+      console.log("Hubo un error: ")
+      console.log(error)
+    });
+  }
+/*  const handleLogout = (event) => {
     event.preventDefault();
     axios.post('http://127.0.0.1:8000/logout/', {withCredentials : true})
     .then(response => {
@@ -22,7 +35,7 @@ function Navbar({children}){
       console.log(error)
     });
   };
-
+*/
     return(
       <div className="drawer static"> 
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
@@ -47,6 +60,7 @@ function Navbar({children}){
                   <li><a href="/Manga">Manga</a></li>
                   <li><a href="/FavoritedA">Favorited</a></li>
                   <li><a href="/SearchPage">Search</a></li>
+                  
                   <li><a href="/LoginCreate">Log in</a></li>
               </ul>
           </div>
@@ -73,7 +87,7 @@ function Navbar({children}){
         </li>
         <li><a href="/Settings" className="justify-between">
           Settings </a></li>
-        <li><a onClick={handleLogout}>Logout</a></li>
+        <li><a href="/LoginCreate" onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>
           </div>
