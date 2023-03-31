@@ -1,7 +1,6 @@
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
 import Layout from "containers/hocs/layouts/layout"
-import sergio from 'assets/images/sergio.jpg'
 
 function Profile() {
   return (
@@ -13,7 +12,7 @@ function Profile() {
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="group hover bg-success w-32 mx-auto rounded-full -mt-20 border-8 ">
   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
 </svg>
-       {/*<img className="w-32 mx-auto rounded-full -mt-20 border-8 " src={sergio} alt="" />*/} 
+       
         <div className="text-center mt-2 text-3xl font-medium">Juan Escutia</div>
         <div className="text-center mt-2 font-light text-sm">Aventandomealvacio1847@gmail.com</div>
         <div className="text-center font-normal text-lg">SenpaiMasterNekitoKawaii2008</div>
