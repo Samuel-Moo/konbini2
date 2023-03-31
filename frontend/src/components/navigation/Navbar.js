@@ -2,6 +2,7 @@ import { connect } from "react-redux"
 import sergio from 'assets/images/sergio.jpg'
 import axios from "axios";
 import Cookies from "js-cookie";
+import konbinilogo from "assets/images/konbinilogo.png"
 
 
 function Navbar({children}){
@@ -47,21 +48,22 @@ function Navbar({children}){
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                   </label>
               </div> 
-          <div className="flex-1 px-2 mx-2">
+          <div className="flex-1 px-2 mx-2  static">
             <a href="/">
-                <button className="px-10">Konbini Anime</button>
+                <img src={konbinilogo} alt="konbinilogo" className="w-40 h-30 "></img>
+                
             </a>    
           </div>
           <div className="flex-none hidden lg:block">
               <ul className="menu menu-horizontal">
            {/* Navbar menu content here */}
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/Anime">Anime</a></li>
-                  <li><a href="/Manga">Manga</a></li>
-                  <li><a href="/FavoritedA">Favorited</a></li>
-                  <li><a href="/SearchPage">Search</a></li>
+                  <li className="text-warning"><a href="/">Home</a></li>
+                  <li className="text-warning"><a href="/Anime">Anime</a></li>
+                  <li className="text-warning"><a href="/Manga">Manga</a></li>
+                  <li className="text-warning"><a href="/FavoritedA">Favorited</a></li>
+                  <li className="text-warning"><a href="/SearchPage">Search</a></li>
                   
-                  <li><a href="/LoginCreate">Log in</a></li>
+                  <li className="text-warning"><a href="/LoginCreate">Log in</a></li>
               </ul>
           </div>
 
@@ -79,15 +81,15 @@ function Navbar({children}){
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-primary rounded-box w-52">
-        <li>
+        <li className="text-accent">
           <a href="/Profile" className="justify-between">
             Profile
             <span className="badge">New</span>
           </a>
-        </li>
-        <li><a href="/Settings" className="justify-between">
+        </li >
+        <li className=""><a href="/Settings" className="justify-between">
           Settings </a></li>
-        <li><a href="/LoginCreate" onClick={handleLogout}>Logout</a></li>
+        <li className="text-info"><a href="/LoginCreate" onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>
           </div>
@@ -98,12 +100,12 @@ function Navbar({children}){
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label> 
           <ul className="menu p-4 w-80 bg-primary">
       {/* Sidebar content here */}
-                <li><a href="/">Home</a></li>
-                <li><a href="/Anime">Anime</a></li>
-                <li><a href="/Manga">Manga</a></li>
-                <li><a href="/FavoritedA">Favorited</a></li>
-                <li><a href="/SearchPage">Search</a></li>
-                <li><a href="/LoginCreate">Log in</a></li>
+                <li className="text-warning"><a href="/">Home</a></li>
+                <li className="text-warning"><a href="/Anime">Anime</a></li>
+                <li className="text-warning"><a href="/Manga">Manga</a></li>
+                <li className="text-warning"><a href="/FavoritedA">Favorited</a></li>
+                <li className="text-warning"><a href="/SearchPage">Search</a></li>
+                <li className="text-warning"><a href="/LoginCreate">Log in</a></li>
               
 
           </ul>

@@ -33,7 +33,7 @@ function MangaEpList(){
                     
             <figure><img src={`https://api.consumet.org/utils/image-proxy?url=${manga.image}&referer=http://www.mangahere.cc/`} alt={manga.id} className=" rounded-lg box-content h-80 w-64 border-4"/></figure>
             
-            <div className="px-10 py-4 ">
+            <div className="px-10 py-4 static">
                 <button className="btn btn-info bg-warning ">
                 Add to favorites +
                 </button>          
@@ -41,17 +41,17 @@ function MangaEpList(){
         </div>
         <div class="col-start-2 col-end-6 row-start-1 row-end-1 bg-secondary rounded">
             <h1 className="text-3xl font-bold">{manga.title}</h1>
-            <p className="badge badge-accent">Rating: {manga.rating}</p>
+            <p className="badge badge-accent text-white">Rating: {manga.rating}</p>
                     
             <h2 className="text-2xl italic underline">Sinapsis</h2>
             <p>{manga.description}
             </p>
             <h2 className="text-xl italic underline text-success list-disc">Status</h2>
-            <p className="italic badge badge-success">{manga.status}
+            <p className="italic badge badge-success text-white">{manga.status}
             </p>
             <h2 className="text-xl italic underline text-warning">Authors</h2>
             {author.map(authors => (
-          <p className="badge badge-warning" key={authors} > {authors} </p> 
+          <p className="badge badge-warning text-white" key={authors} > {authors} </p> 
         ))}
             <h2 className="text-xl italic underline text-error">Genres</h2>
             {genres.map(genre => (

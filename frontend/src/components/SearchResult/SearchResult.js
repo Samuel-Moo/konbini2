@@ -26,15 +26,15 @@ function SearchResult(){
         <div>
         <div className="flex py-4 justify-center">
             <div className="btn-group">
-                <a href="/SearchPage"><button className="btn">Anime</button></a>
-                <a href="/SearchManga"><button className="btn">Manga</button></a>
+                <a href="/SearchPage"><button className="btn btn-info text-neutral">Anime</button></a>
+                <a href="/SearchManga"><button className="btn btn-accent text-neutral">Manga</button></a>
                 </div>
         </div>
                 
 
         <form onSubmit={handleSubmit}>
             <div className="form-control px-2 py-2 place-items-center">
-                <input type="text" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Look anime, movies, and OVAS" className="input input-bordered bg-secondary  box-content w-80 " />   
+                <input type="text" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Look anime, movies, and OVAS" className="input input-bordered input-warning bg-secondary  box-content w-80 " />   
                 <input type="submit" value="submit" className="" hidden/>
             </div>
         </form>
