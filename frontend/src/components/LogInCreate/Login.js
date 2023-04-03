@@ -2,25 +2,28 @@ import { connect } from "react-redux";
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+
+
 function Login(){
   const navigate = useNavigate();
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginFail, setLoginFailed] = useState(false);
+  const [currentUser, setCurrentUser] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     axios.post('http://127.0.0.1:8000/login/', {
-      username: username,
+      email: email,
       password: password,
-    })
+    }, {withCredentials : true})
       .then(response => {
         console.log(response.data);
         navigate('/');
         setIsLoggedIn(true);
-        // Set cookies
+        
         
       })
       .catch(error => {
@@ -80,9 +83,9 @@ function Login(){
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Username</span>
+                  <span className="label-text">Email</span>
                 </label>
-                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Write your username" className="input input-bordered" />
+                <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Write your Email" className="input input-bordered" />
               </div>
               <div className="form-control">
                 <label className="label">

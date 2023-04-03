@@ -5,6 +5,7 @@ from rest_framework.decorators import permission_classes
 from rest_framework.decorators import authentication_classes
 from django.http import JsonResponse
 
+# All of this function do a different thing, the names are pretty self explanatory 
 def getTopAiringAnime(request):
     url = 'https://gogoanime.consumet.stream/top-airing'
     response = requests.get(url)
@@ -30,7 +31,7 @@ def getAnimeMovies(request):
     data = response.json()
     return JsonResponse(data, safe=False)
 
-
+# this function is a bit different as it has a parameter we give to it in the front end
 @api_view(['GET'])
 @authentication_classes([])
 @permission_classes([])
@@ -40,7 +41,7 @@ def search(request, query):
     results = response.json()
     return JsonResponse(results, safe=False)
 
-
+# Same with before
 @api_view(['GET'])
 @authentication_classes([])
 @permission_classes([])
@@ -51,7 +52,7 @@ def getAnimeDetails(request, animeId):
     return JsonResponse(results, safe=False)
 
 
-
+# Same with before
 @api_view(['GET'])
 @authentication_classes([])
 @permission_classes([])

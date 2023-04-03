@@ -17,6 +17,7 @@ import AVideo from "containers/pages/AVideo";
 import MangaLec from "containers/pages/MangaLec";
 import Mangas from "containers/pages/Manga-ep";
 import SearchPage from "containers/pages/SearchPage";
+import SearchManga from "containers/pages/SearchPageManga";
 
 
 function App() {
@@ -55,13 +56,15 @@ function App() {
 
          
           {/*Manga Lector */}
-          <Route path="/MangaLec" element={<MangaLec />} />
+          <Route path="/MangaLec/:idChapter" element={<MangaLec />} />
 
           {/*Manga info page*/}
-          <Route path="/Mangas" element={<Mangas />} />
+          <Route path="/Mangas/:idManga" element={<Mangas />} />
 
           {/*Search Result page */}
           <Route path="/SearchPage" element={<SearchPage/>}/>
+
+          <Route path="/SearchManga" element={<SearchManga/>}/>
 
 
 
@@ -76,6 +79,7 @@ function App() {
           <Route path="/Profile" element={<Profile />} />
 
           <Route path="/Settings" element={<Settings />} />
+          
 
         </Routes>
       </Router>

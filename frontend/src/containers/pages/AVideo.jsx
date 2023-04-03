@@ -20,8 +20,20 @@ function AVideo(){
     return(
         <Layout>
             <Navbar>
-            
+            <div className="py-4"><h1 className="text-3xl text-center font-bold underline">Name</h1></div>
+        
             <iframe className="w-2/3 aspect-video self-center" src={video.Referer} allowFullScreen ></iframe> 
+            <div className="py-4 flex flex-row  place-content-center gap-4">
+            <button className="btn btn-accent outline outline-offset-2 outline-3">
+                episode list
+                </button>
+            <button className="btn btn-accent basis-1/4 outline outline-offset-2 outline-4">
+                Prev
+                </button>
+                <button className="btn btn-accent basis-1/4 outline outline-offset-2 outline-3">
+                Next
+                </button>
+            </div>
             <Footer/> 
             </Navbar>
         </Layout>
